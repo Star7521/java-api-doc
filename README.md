@@ -1,13 +1,9 @@
 # java-api-doc
- 励志做java届最好的文档生成工具，自动解析代码生成api接口文档，前后台分离开发的福音，零代码入侵，零注释入侵
-
-# 解决的痛点
-
-通常的文档生成工具，都需要开发人员编写注解或注释，代码入侵太强，而且费事，我希望工具自动解析代码，然后根据代码生成文档，如果有注释就自动扫描注释，没有就以代码为准，生成的文档如果有不合理的地方，可以在页面进行修改，利用web页面的表单编辑修改要比在代码里处理方便直观。
+ 零代码入侵，零注释入侵
 
 # 页面布局
 
-如下图（图片拼接左侧菜单可能模糊或重影，凑合看）：
+如下图：
 ![](https://upload-images.jianshu.io/upload_images/2833665-53f414cfad38ceeb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 1. 左侧为菜单，菜单分为两级，一级表示模块，二级表示接口信息，一级菜单就是你定义的模块名称，二级菜单是对外接口的方法名，如果你的方法上有注释，这里会自动解析方法的注释作为二级菜单。菜单拖拽可以排序。
@@ -18,16 +14,9 @@
 
 1. 左侧二级菜单可以双击修改，失去焦点时自动保存
 
-![image.png](https://upload-images.jianshu.io/upload_images/2833665-5dc199a55b14c436.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
 2.  左侧一级，二级菜单可以拖拽排序
 
-![](https://upload-images.jianshu.io/upload_images/2833665-48bec519664901d6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
 3. 所有带 “编辑”按钮的地方都可以编辑保存，textarea编辑时可以带回车换行，自动记录你的文本格式
-
-![](https://upload-images.jianshu.io/upload_images/2833665-c5046ecef5f1a328.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-![](https://upload-images.jianshu.io/upload_images/2833665-b4cabf890746dd86.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 4. 请求参数和响应参数，本身是一个树结构，所有编辑的时候跟普通的编辑树一样操做，包括添加一级数据，添加子数据，修改，删除，保存等等，鼠标移入会有提示，如下图
 
@@ -45,7 +34,7 @@
 
 # 代码使用
 
-1. 引入jar包（暂未上传maven，近期上传maven）
+1. 引入jar包
 ```
        <!--Maven jar包引入方式-->
         <dependency>
